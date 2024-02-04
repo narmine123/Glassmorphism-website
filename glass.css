@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e 10% , #F5416C 100%);
+}
+header{
+    height: 85vh;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 12;
+
+}
+body::before , 
+body::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+body::before{
+    clip-path: circle(30% at left 20%);
+    background: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+}
+body::after{
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%);
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+   padding: 35px 50px;
+    justify-content: space-between;
+    position: relative;
+}
+.navbar .logo a {
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+.navbar .menu{
+    display: flex;
+}
+.navbar .menu li{
+    list-style: none;
+    margin: 0 6px;
+
+}
+.navbar.menu  a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+}
+.navbar .menu a:hover{
+    color: #f2f2f2;
+}
+
+.buttons input{
+    color: #f2f2f2;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 12px;
+    margin: 0 8px;
+    background:linear-gradient(135deg, #F6416C 10%, #ff9a9e 100%); 
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+
+}
+.text-content{
+    position: absolute;
+    width: 40%;
+    height: 50px;
+    top: 170px;
+}
+
+.text-content h2{
+    font-size: 27px;
+    font-weight: 600;
+}
+.text-content p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.play {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    margin-right: 30px;
+    margin-top: 480px;
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    top: 30px;
+
+}
+.play img{
+   
+    width: 20px;
+    margin-right: 0;
+
+}
+
+@media (max-width:850px){
+    header .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .menu{
+        margin: 10px 0 20px 0;
+    }
+    .text-content{
+        width: 70%;
+        margin: 30px 0 0 20px;
+    }
+}
